@@ -11,17 +11,14 @@ class MonthlySalary{
             //Uses t to set the date to the last day of the month
             $paymentDate = date("t-m-Y",strtotime($firstOfMonth));
             //Checks which day the last day of the month is
-            $dayOfMonth = date('l',strtotime($paymentDate));
-            
+            $dayOfMonth = date('l',strtotime($paymentDate));       
             //Checks if the last day of the month is during a weekend, and sets paymentDate to the friday before if so
             if($dayOfMonth === 'Saturday' || $dayOfMonth === 'Sunday'){                    
                 $paymentDate = date("d-m-Y", strtotime("last friday ".strval($year)."-".strval($i+1)));
             }
             //Adds the paymentDate to the paymentDates array, using the month as a key
             $paymentDates[$month] = $paymentDate;
-
         }
-
         return $paymentDates;
     }
 }
