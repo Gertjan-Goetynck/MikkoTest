@@ -1,4 +1,4 @@
-#PHP test
+# PHP test
 
 This is a small utility application made as a test.
 
