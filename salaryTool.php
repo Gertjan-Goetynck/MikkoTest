@@ -16,12 +16,9 @@ if(isset($_POST["year"])){
                 $fileName = 'payment_dates_'.$_POST['year'].'.csv';
                 $downloadDataService->downloadCsv($fileName, $salaryBonusDates);
                 break;
-        }
-  
-        
+        }    
     }
 }
-
 ?>
 
 <!DOCTYPE html>
